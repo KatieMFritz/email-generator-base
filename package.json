@@ -1,0 +1,25 @@
+{
+  "name": "email-generator",
+  "version": "0.0.1",
+  "scripts": {
+    "dev:server": "live-server",
+    "dev:sass-watch": "node-sass source/scss/style.scss --watch --output=compiled/css --output-style=compressed --source-map=true",
+    "dev": "run-p dev:*",
+    "build:sass": "node-sass source/scss/style.scss --output=compiled/css --output-style=compressed --source-map=true",
+    "build:htmlhint": "htmlhint index.html",
+    "build:stylelint": "stylelint source/scss/style.scss",
+    "build:standard": "standard clicky.js",
+    "deploy": "run-s build:*"
+  },
+  "devDependencies": {
+    "firebase-cli": "^1.2.0",
+    "htmlhint": "^0.9.13",
+    "live-server": "^1.2.0",
+    "node-sass": "^4.5.2",
+    "standard": "^10.0.2"
+  },
+  "dependencies": {
+    "firebase": "^3.7.8",
+    "vue": "^2.2.6"
+  }
+}
